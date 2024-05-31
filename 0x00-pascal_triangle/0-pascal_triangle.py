@@ -43,8 +43,10 @@ def pascal(n):
         list: A list representing the elements of the specified row.
     """
     row = [1]
-    for x in range(n):
-        row.append(int(row[x] * (n - x) / (x + 1)))
+    for x in range(1, n // 2 + 1):  # Calculate up to the middle
+        value = int(row[x - 1] * (n - x + 1) / x)
+        row.append(value)
+    row.extend(row[:n // 2][::-1])  # Mirror for the right half
     return row
 
 
