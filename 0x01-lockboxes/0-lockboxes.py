@@ -26,14 +26,14 @@ def unlock_boxes(boxes):
     - Initialize empty list 'unlocked' to store unlocked boxes.
     - Initialize an empty list 'key_dump' to store keys found in unlocked
     boxes.
-    - Initialize a list 'unlock_keys' with the first box index, 
+    - Initialize a list 'unlock_keys' with the first box index,
     which is 0 unlocked by default.
     - Iterate 'len(boxes)' times to ensure all boxes are processed.
         - Iterate over each key in 'unlock_keys'.
             - If key in 'unlocked' list, skip it.
             - Extend 'key_dump' list with keys found in current box.
             - Add the current key to 'unlocked' list.
-        - Assign the unique values from 'key_dump' to 'unlock_keys' 
+        - Assign the unique values from 'key_dump' to 'unlock_keys'
     to get the next set of keys to check.
         - Clear the 'key_dump' list for the next iteration.
         - Return the sorted 'unlocked' list.
@@ -67,7 +67,7 @@ def canUnlockAll(boxes):
 
     Algorithm:
     - Call 'unlock_boxes' function with given 'boxes'.
-    - Check if sorted list of unlocked boxes is equal to 
+    - Check if sorted list of unlocked boxes is equal to
     the range of the number of boxes.
         - If equal, return True else False.
     """
