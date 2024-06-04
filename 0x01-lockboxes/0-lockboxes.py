@@ -24,8 +24,10 @@ def unlock_boxes(boxes):
 
     Algorithm:
     - Initialize empty list 'unlocked' to store unlocked boxes.
-    - Initialize an empty list 'key_dump' to store keys found in unlocked boxes.
-    - Initialize a list 'unlock_keys' with the first box index, which is 0 unlocked by default.
+    - Initialize an empty list 'key_dump' to store keys found in unlocked
+boxes.
+    - Initialize a list 'unlock_keys' with the first box index, 
+which is 0 unlocked by default.
     - Iterate 'len(boxes)' times to ensure all boxes are processed.
         - Iterate over each key in 'unlock_keys'.
             - If key in 'unlocked' list, skip it.
