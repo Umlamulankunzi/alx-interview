@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 
-
-
 """
 This module contains a function to unlock boxes represented by a list of
 lists. It determines if all the boxes can be opened by checking if the keys
 in the boxes can unlock all the boxes.
 """
-
 
 
 def unlock_boxes(boxes):
@@ -59,7 +56,7 @@ def canUnlockAll(boxes):
     """Check if all the boxes can be unlocked.
 
     Parameters:
-        boxes: list of lists representing locked boxes. 
+        boxes: list of lists representing locked boxes.
         Each sublist contains the keys to the other boxes.
 
     Returns:
