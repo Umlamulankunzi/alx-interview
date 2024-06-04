@@ -41,10 +41,11 @@ def unlock_boxes(boxes):
 
     for _ in range(len(boxes)):
         for key in unlock_keys:
-            if key in unlocked:
+            if key in unlocked or ke >= len(boxes):
                 pass
-            key_dump.extend(boxes[key])
-            unlocked.append(key)
+            else:
+                key_dump.extend(boxes[key])
+                unlocked.append(key)
 
         unlock_keys = list(set(key_dump))
         key_dump.clear()
