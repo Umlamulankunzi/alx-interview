@@ -67,7 +67,8 @@ def canUnlockAll(boxes):
 
     Algorithm:
     - Call 'unlock_boxes' function with given 'boxes'.
-    - Check if sorted list of unlocked boxes is equal to the range of the number of boxes.
+    - Check if sorted list of unlocked boxes is equal to 
+    the range of the number of boxes.
         - If equal, return True else False.
     """
 
