@@ -3,7 +3,9 @@
 
 
 """
-This module contains a function to unlock boxes represented by a list of lists. It determines if all the boxes can be opened by checking if the keys in the boxes can unlock all the boxes.
+This module contains a function to unlock boxes represented by a list of
+lists. It determines if all the boxes can be opened by checking if the keys
+in the boxes can unlock all the boxes.
 """
 
 
