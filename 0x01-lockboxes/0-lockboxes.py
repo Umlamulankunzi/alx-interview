@@ -73,5 +73,3 @@ def canUnlockAll(boxes):
     """
 
     return unlock_boxes(boxes) == list(range(len(boxes)))
-
-
