@@ -41,7 +41,7 @@ def unlock_boxes(boxes):
 
     for _ in range(len(boxes)):
         for key in unlock_keys:
-            if key in unlocked or ke >= len(boxes):
+            if key in unlocked or key >= len(boxes):
                 pass
             else:
                 key_dump.extend(boxes[key])
