@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-This script reads log data from stdin, computes metrics, and prints statistics.
+Script reads log data from stdin, computes metrics and prints statistics.
 
-It processes log entries line by line, calculating the total file size and
+Log entries processesed line by line, calculating the total file size and
 counting occurrences of different HTTP status codes. Statistics are printed
 after every 10 lines, upon keyboard interruption, or at the end of input.
 """
@@ -18,7 +18,7 @@ def print_stats(total_size, status_codes):
 
     Args:
         total_size (int): The total file size processed.
-        status_codes (dict): A dictionary containing counts of HTTP status codes.
+        status_codes (dict): A dict containing counts of HTTP status codes.
 
     Returns:
         None
@@ -51,8 +51,9 @@ def main():
     """
     Main function to process log data and compute statistics.
 
-    This function reads log data from stdin, computes metrics, and prints
-    statistics every 10 lines, upon keyboard interruption, or at the end of input.
+    Function reads log data from stdin, computes metrics and prints
+    statistics every 10 lines, upon keyboard interruption, or at the
+    end of input.
 
     Returns:
         None
