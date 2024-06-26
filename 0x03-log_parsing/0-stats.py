@@ -4,7 +4,7 @@ This script reads log data from stdin, computes metrics, and prints statistics.
 
 It processes log entries line by line, calculating the total file size and
 counting occurrences of different HTTP status codes. Statistics are printed
-after every 10 lines or upon keyboard interruption.
+after every 10 lines, upon keyboard interruption, or at the end of input.
 """
 
 import sys
@@ -52,7 +52,7 @@ def main():
     Main function to process log data and compute statistics.
 
     This function reads log data from stdin, computes metrics, and prints
-    statistics every 10 lines or upon keyboard interruption.
+    statistics every 10 lines, upon keyboard interruption, or at the end of input.
 
     Returns:
         None
@@ -71,6 +71,10 @@ def main():
 
                 if line_count % 10 == 0:
                     print_stats(total_size, status_codes)
+
+        # Print final statistics if there's any data processed
+        if line_count > 0:
+            print_stats(total_size, status_codes)
 
     except KeyboardInterrupt:
         print_stats(total_size, status_codes)
