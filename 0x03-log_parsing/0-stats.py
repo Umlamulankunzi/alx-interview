@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""print status codes stats as read from stdin"""
+"""
+print status codes stats as read from stdin
+"""
 
 import sys
 import re
