@@ -76,6 +76,8 @@ def main():
         # Print final statistics if there's any data processed
         if line_count > 0:
             print_stats(total_size, status_codes)
+        else:
+            print_stats(total_size, status_codes)
 
     except KeyboardInterrupt:
         print_stats(total_size, status_codes)
