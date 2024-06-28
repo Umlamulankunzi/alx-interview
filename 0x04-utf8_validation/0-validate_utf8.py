@@ -5,7 +5,7 @@ Script Determines if given data is valid utf8.
 
 
 def validUTF8(data):
-    """Verifies if data is valid utf8 format. 
+    """Verifies if data is valid utf8 format.
 
     Returns true if data is valid utf8
     """
