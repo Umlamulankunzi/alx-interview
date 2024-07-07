@@ -6,7 +6,6 @@ script that solves the NQueens challenge utilising the concept of backtracking
 import sys
 
 
-
 def is_safe(board, row, col, N):
     """Check if it's safe to place a queen at board[row][col]."""
     # Check row on the left side
