@@ -9,17 +9,17 @@ import sys
 
 def is_safe(board, row, col, N):
     """Check if it's safe to place a queen at board[row][col]."""
-    # Check this row on the left side
+    # Check row on the left side
     for i in range(col):
         if board[row][i] == 1:
             return False
 
-    # Check upper diagonal on the left side
+    # Check upper diagonal on left side
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
 
-    # Check lower diagonal on the left side
+    # Check lower diagonal on left side
     for i, j in zip(range(row, N, 1), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
@@ -29,7 +29,7 @@ def is_safe(board, row, col, N):
 
 def solve_n_queens_util(board, col, N, solutions):
     """Utilize backtracking to solve the N Queens problem."""
-    # If all queens are placed, record the solution
+    # If all queens are placed append solution
     if col >= N:
         solution = []
         for i in range(N):
@@ -39,7 +39,7 @@ def solve_n_queens_util(board, col, N, solutions):
         solutions.append(solution)
         return
 
-    # Consider this column and try placing this queen in all rows one by one
+    # Consider column and try placing this queen in all rows one by one
     for i in range(N):
         if is_safe(board, i, col, N):
             # Place this queen in board[i][col]
@@ -84,4 +84,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main() 
+    main()
