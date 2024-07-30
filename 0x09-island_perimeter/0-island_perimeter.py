@@ -37,26 +37,15 @@ def island_perimeter(grid):
 
     for row in range(rows):
         for sq in range(cols):
-            if grid[row][sq] == 1:
-                if row != 0:
-                    if grid[row-1][sq] == 0:
-                        perimeter += 1
-                    if grid[row+1][sq] == 0:
-                        perimeter += 1
-                if sq != 0:
-                    if grid[row][sq-1] == 0:
-                        perimeter += 1
-                    if grid[row][sq+1] == 0:
-                        perimeter += 1
+            if grid[row][sq] == 1:  # Land found
+                perimeter += 4
+
+                # Check the cell above
+                if row > 0 and grid[row - 1][sq] == 1:
+                    perimeter -= 2
+
+                # Check the cell to the left
+                if sq > 0 and grid[row][sq - 1] == 1:
+                    perimeter -= 2
+
     return perimeter
-
-
-if __name__ == "__main__":
-    grid = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 1, 0, 0, 0, 0],
-        [0, 1, 0, 0, 0, 0],
-        [0, 1, 1, 1, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-    ]
-    print(island_perimeter(grid))
